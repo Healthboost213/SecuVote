@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SecuVote</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#3942a8;
+      min-height:100vh;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      padding:20px;
+    }
+
+    /* Main Card */
+
+    .thankyou-container{
+      width:100%;
+      max-width:600px;
+
+      background:white;
+
+      border-radius:18px;
+
+      padding:60px 40px;
+
+      text-align:center;
+
+      box-shadow:0 12px 35px rgba(0,0,0,0.15);
+    }
+
+    /* Success Circle */
+
+    .success-icon{
+      width:110px;
+      height:110px;
+
+      margin:0 auto 30px;
+
+      border-radius:50%;
+
+      background:#5865f2;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      color:rgb(255, 255, 255);
+
+      font-size:50px;
+      font-weight:700;
+
+      box-shadow:0 10px 25px rgba(88,101,242,0.35);
+    }
+
+    /* Title */
+
+    .thankyou-title{
+      font-size:38px;
+      font-weight:700;
+      color:#222;
+
+      margin-bottom:14px;
+    }
+
+    /* Description */
+
+    .thankyou-text{
+      font-size:16px;
+      color:#666;
+
+      line-height:1.7;
+
+      margin-bottom:35px;
+    }
+
+    /* Information Box */
+
+    .info-box{
+      background:#f7f8ff;
+
+      border:1px solid #e5e8ff;
+
+      padding:18px;
+
+      border-radius:12px;
+
+      margin-bottom:30px;
+
+      color:#555;
+
+      font-size:14px;
+
+      line-height:1.6;
+    }
+
+    /* Button */
+
+    .done-btn{
+      border:none;
+
+      background:#5865f2;
+      color:white;
+
+      padding:16px 32px;
+
+      border-radius:40px;
+
+      font-size:15px;
+      font-weight:600;
+
+      cursor:pointer;
+
+      transition:0.25s ease;
+
+      box-shadow:0 8px 18px rgba(88,101,242,0.25);
+    }
+
+    .done-btn:hover{
+      background:#4350e6;
+      transform:translateY(-2px);
+    }
+
+   
+
+    @media(max-width:768px){
+
+      .thankyou-container{
+        padding:45px 25px;
+      }
+
+      .thankyou-title{
+        font-size:30px;
+      }
+
+      .thankyou-text{
+        font-size:15px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="thankyou-container">
+
+    <!-- Success Icon -->
+
+    <div class="success-icon">
+      ✓
+    </div>
+
+    <!-- Heading -->
+
+    <h1 class="thankyou-title">
+      Vote Submitted
+    </h1>
+
+    <!-- Description -->
+
+    <p class="thankyou-text">
+      Thank you for participating in the Student Council Elections.
+      Your vote has been securely recorded and successfully submitted.
+    </p>
+
+    <!-- Info Box -->
+
+    <div class="info-box">
+      Your participation helps create a fair and representative student leadership system.
+      You may now safely close this page.
+    </div>
+
+    <!-- Button -->
+
+    <a href="/"></a>
+
+    
+
+</body>
+</html>

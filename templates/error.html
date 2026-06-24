@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SecuVote</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#3942a8;
+      min-height:100vh;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      padding:20px;
+    }
+
+    /* Main Error Card */
+
+    .error-container{
+      width:100%;
+      max-width:620px;
+
+      background:white;
+
+      border-radius:18px;
+
+      padding:60px 40px;
+
+      text-align:center;
+
+      box-shadow:0 12px 35px rgba(0,0,0,0.15);
+    }
+
+    /* Error Icon */
+
+    .error-icon{
+      width:110px;
+      height:110px;
+
+      margin:0 auto 30px;
+
+      border-radius:50%;
+
+      background:#ff4d4f;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      color:white;
+
+      font-size:55px;
+      font-weight:700;
+
+      box-shadow:0 10px 25px rgba(255,77,79,0.30);
+    }
+
+    /* Error Title */
+
+    .error-title{
+      font-size:38px;
+      font-weight:700;
+      color:#222;
+
+      margin-bottom:14px;
+    }
+
+    /* Error Message */
+
+    .error-text{
+      font-size:16px;
+      color:#666;
+
+      line-height:1.7;
+
+      margin-bottom:35px;
+    }
+
+    /* Info Box */
+
+    .info-box{
+      background:#fff5f5;
+
+      border:1px solid #ffd6d6;
+
+      padding:18px;
+
+      border-radius:12px;
+
+      margin-bottom:30px;
+
+      color:#666;
+
+      font-size:14px;
+
+      line-height:1.6;
+    }
+
+    /* Buttons */
+
+    .button-group{
+      display:flex;
+      justify-content:center;
+      gap:15px;
+      flex-wrap:wrap;
+    }
+
+    .action-btn{
+      border:none;
+
+      padding:15px 28px;
+
+      border-radius:40px;
+
+      font-size:15px;
+      font-weight:600;
+
+      cursor:pointer;
+
+      transition:0.25s ease;
+    }
+
+    
+
+    .retry-btn:hover{
+      background:#4350e6;
+      transform:translateY(-2px);
+    }
+
+    /* Secondary Button */
+
+    .secondary-btn{
+      background:#ececec;
+      color:#444;
+    }
+
+    .secondary-btn:hover{
+      background:#dddddd;
+    }
+
+  
+    @media(max-width:768px){
+
+      .error-container{
+        padding:45px 25px;
+      }
+
+      .error-title{
+        font-size:30px;
+      }
+
+      .error-text{
+        font-size:15px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="error-container">
+
+    <!-- Error Icon -->
+
+    <div class="error-icon">
+      !
+    </div>
+
+    <!-- Heading -->
+
+    <h1 class="error-title">
+      Something Went Wrong
+    </h1>
+
+    <!-- Description -->
+
+    <p class="error-text">
+      We were unable to process your request at this time.
+      Please try again or contact your administrator if the issue continues.
+    </p>
+
+    <!-- Info Box -->
+
+    <div class="info-box">
+      This may be caused by a temporary network issue, expired session,
+      or server maintenance.
+    </div>
+
+    <!-- Buttons -->
+
+    <div class="button-group">
+        
+      <a href="/signin">
+
+        <button class="action-btn secondary-btn">
+          Return Home
+        </button>
+
+      </a>
+
+    </div> 
+  </div>
+
+</body>
+</html>

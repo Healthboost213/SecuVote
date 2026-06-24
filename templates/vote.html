@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SecuVote</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#3942a8;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+      padding:40px;
+    }
+
+    /* Main Container */
+
+    .voting-container{
+      width:100%;
+      max-width:900px;
+      background:white;
+      padding:35px;
+      border-radius:12px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    .main-title{
+      font-size:28px;
+      font-weight:700;
+      color:#222;
+      margin-bottom:35px;
+      text-align:center;
+    }
+
+    /* Position Section */
+
+    .position-section{
+      margin-bottom:20px;
+    }
+
+    .position-title{
+      font-size:20px;
+      font-weight:700;
+      color:#333;
+      margin-bottom:20px;
+      padding-bottom:10px;
+      border-bottom:2px solid #f1f1f1;
+      letter-spacing:1px;
+    }
+
+    /* Divider Between Positions */
+
+    .position-divider{
+      margin:45px 0;
+      border:none;
+      border-top:2px solid #ececec;
+    }
+
+    /* Candidate Card */
+
+    .candidate-card{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+
+      border:1px solid #e5e5e5;
+      border-radius:10px;
+
+      padding:20px;
+      margin-bottom:15px;
+
+      transition:0.25s ease;
+      background:#fff;
+    }
+
+    .candidate-card:hover{
+      border-color:#5865f2;
+      transform:translateY(-2px);
+      box-shadow:0 8px 18px rgba(0,0,0,0.08);
+    }
+
+    /* Left Side */
+
+    .candidate-left{
+      display:flex;
+      align-items:center;
+      gap:18px;
+    }
+
+    /* Candidate Photo */
+
+    .candidate-photo{
+      width:75px;
+      height:75px;
+      border-radius:12px;
+      object-fit:cover;
+      border:2px solid #f1f1f1;
+    }
+
+    /* Candidate Info */
+
+    .candidate-info h3{
+      font-size:18px !important;
+      color:#222 !important;
+      margin-bottom:6px !important;
+    }
+
+    .candidate-info p{
+      font-size:13px !important;
+      color:#666 !important;
+    }
+
+    /* Right Side */
+
+    .candidate-right{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color:#777;
+      font-size:14px;
+    }
+
+    input[type="radio"]{
+      width:18px;
+      height:18px;
+      cursor:pointer;
+      accent-color:#5865f2;
+    }
+
+    /* Submit Button */
+
+    .submit-btn{
+      width:100%;
+      border:none;
+      padding:16px;
+      border-radius:40px;
+      font-size:15px;
+      font-weight:600;
+      cursor:pointer;
+      transition:0.25s ease;
+      background:#5865f2;
+      color:white;
+      box-shadow:0 8px 18px rgba(88,101,242,0.25);
+      margin-top:10px;
+    }
+
+    .submit-btn:hover{
+      background:#4350e6;
+      transform:translateY(-2px);
+    }
+
+    /* Responsive */
+
+    @media(max-width:700px){
+
+      .candidate-card{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+      }
+
+      .candidate-right{
+        width:100%;
+        justify-content:flex-end;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="voting-container">
+
+    <h1 class="main-title">
+      School Election Voting
+    </h1>
+
+    <!-- HEAD BOY -->
+
+    <form action="/submit" method="POST">
+
+      {% for position, data in student_data.items() %}
+
+        <div class="position-section">
+
+          <div class="position-title">
+            {{ position }}
+          </div>
+
+          <!-- Candidate 1 -->
+
+          {% for entry in data %}
+
+            <div class="candidate-card">
+
+              <div class="candidate-left">
+
+                <img src="../static/{{ entry[5] }}" alt="candidate" class="candidate-photo">
+
+                <div class="candidate-info">
+                  <h3>{{ entry[2] }} {{ entry[3] }}</h3>
+                  <p>{{ entry[4] }}</p>
+                </div>
+
+              </div>
+
+              <div class="candidate-right">
+                <input type="radio" name="{{ entry[0] }}" value="{{ entry[1] }}" required>
+                <span>Vote Me!</span>
+              </div>
+
+            </div>
+
+          {% endfor %}
+
+        </div>
+
+      {% endfor %}
+
+      <!-- Submit Button -->
+
+      <!-- <button class="submit-btn">
+        Submit Vote
+      </button> -->
+
+      <input type="submit" value="Submit Vote" class="submit-btn">
+
+    </form>
+
+  </div>
+
+</body>
+
+<script>
+
+  window.onpageshow = function(event) {
+      if (event.persisted) {
+        window.location.reload();
+      }
+    }
+
+</script>
+
+
+
+</html>
