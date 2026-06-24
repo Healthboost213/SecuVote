@@ -11,6 +11,6 @@ It is meant to be integrated cleanly for organisations relying on Google Workspa
 👤 Total User Anonymity and Vote Hashing
 
 ### Credits: 
-- Riyaz (@healthboost213): Flask Backend Development and Linux Deployment
-- Raihaan (@raihaan-proj): MySQLDB Architecting and Deployment Work
-- Shaarvin (@Shaarvin-67): HTML + CSS Frontend Development
+- Riyaz ([@healthboost213](https://github.com/Healthboost213)): Flask Backend Development and Linux Deployment
+- Raihaan ([@raihaan-proj](https://github.com/raihaan-proj)): MySQLDB Architecting and Deployment Work
+- Shaarvin ([@Shaarvin-67](https://github.com/Shaarvin-67)): HTML + CSS Frontend Development
