@@ -5,8 +5,8 @@ import time
 
 conn = mysql.connector.connect(
     host = "192.168.1.125",
-    user = "Raihaan",
-    password = "Raihaan_321",
+    user = "username",
+    password = "username_123",
     database = "Student_Council",
 )
 
