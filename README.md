@@ -9,3 +9,8 @@ It is meant to be integrated cleanly for organisations relying on Google Workspa
 🔐 Google OAuth Login using Flask-Dance  
 💉 Preventing SQLi Attacks using SQLAlchemy  
 👤 Total User Anonymity and Vote Hashing
+
+### Credits: 
+- Riyaz (@healthboost213): Flask Backend Development and Linux Deployment
+- Raihaan (@raihaan-proj): MySQLDB Architecting and Deployment Work
+- Shaarvin (@Shaarvin-67): HTML + CSS Frontend Development
