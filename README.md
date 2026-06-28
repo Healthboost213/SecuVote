@@ -8,7 +8,7 @@ It is meant to be integrated cleanly for organisations relying on Google Workspa
 💪 Robust Configuration of Postings and Candidates  
 🔐 Google OAuth Login using Flask-Dance  
 💉 Preventing SQLi Attacks using SQLAlchemy  
-👤 Total User Anonymity and Vote Hashing
+👤 Total User Anonymity and Email Hashing
 
 ### Documentation & Deployment Guide:
 [Read Here](docs.md)
